@@ -24,10 +24,13 @@ package ru.oop.task2;
 public class MainTask2 {
 
     /**
-     * Переехать из текущего места в заданную точку
-     * на любом транспорте
-     * @see Person
-     * @see Position
+     * Переехать из текущего места в заданную точку на любом транспорте
      */
-    // TODO реализовать метод moveTo(...)
+    public void moveTo(Person person, Position destination){
+        Transport car = new Car(person);
+        person.walk(car.getPosition());
+        car.moveToAndRemovePerson(destination);
+        person.walk(destination);
+        assert person.getPosition() == destination;
+    }
 }
