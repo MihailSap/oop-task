@@ -36,13 +36,9 @@ public class MainTask3 {
         person.walk(transports.getFirst().getPosition());
         for(int i = 0; i < transports.size() - 1; i++){
             Transport currentTransport = transports.get(i);
-            person.setTransport(currentTransport);
             currentTransport.moveTo(transports.get(i+1).getPosition());
-            person.removeTransport();
         }
-        person.setTransport(transports.getLast());
         transports.getLast().moveTo(destination);
-        person.removeTransport();
         person.walk(destination);
         assert person.getPosition() == destination;
     }

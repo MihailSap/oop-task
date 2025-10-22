@@ -11,20 +11,9 @@ interface Person extends Positioned {
     /**
      * Пройти до указанного места из текущего местоположения
      * Если человек уже находится в указанной позиции, то метод завершает свою работу
+     * Если местом назначения является транспорт, то человек в него садится
      *
      * @param destination место назначения
      */
     void walk(Position destination);
-
-    /**
-     * Человек садится в указанный транспорт
-     *
-     * @param transport
-     */
-    void setTransport(Transport transport);
-
-    /**
-     * Человек выходит из транспорта
-     */
-    void removeTransport();
 }

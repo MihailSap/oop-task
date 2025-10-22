@@ -3,6 +3,9 @@ package ru.oop.task1;
 /**
  * Машина
  *
+ * Класс представляет машину. Он нужен, чтобы создавать объект машины,
+ * садить в неё человека и довозить до места назначения (насколько это возможно)
+ *
  * @author MihailSap
  * @since 17.10.2025
  */
@@ -19,7 +22,7 @@ public class Car {
     /**
      * Машина довозит человека до определенной позиции и высаживает
      */
-    public void rideToAndRemovePerson(Position destination){
+    public void moveTo(Position destination){
 
     }
 }

@@ -26,10 +26,9 @@ public class MainTask2 {
     /**
      * Переехать из текущего места в заданную точку на любом транспорте
      */
-    public void moveTo(Person person, Position destination){
-        Transport car = new Car(person);
-        person.walk(car.getPosition());
-        car.moveToAndRemovePerson(destination);
+    public void moveTo(Person person, Position destination, Transport transport){
+        person.walk(transport.getPosition());
+        transport.moveTo(destination);
         person.walk(destination);
         assert person.getPosition() == destination;
     }

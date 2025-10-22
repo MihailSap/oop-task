@@ -3,6 +3,9 @@ package ru.oop.task2;
 /**
  * Транспорт
  *
+ * Транспорт может быть разным, поэтому я определил его через интерфейс.
+ * С помощью транспорта, человек может доехать до места назначения (насколько это возможно)
+ *
  * @author MihailSap
  * @since 17.10.2025
  */
@@ -15,5 +18,5 @@ public interface Transport extends Positioned{
      *
      * @param destination место назначения
      */
-    void moveToAndRemovePerson(Position destination);
+    void moveTo(Position destination);
 }
